@@ -4,7 +4,7 @@ import Button from "@/components/button";
 
 const Hero = () => {
   return (
-    <section className="hero-bg relative h-[90vh] flex space-y-4 items-center">
+    <section className="hero-bg relative h-[90vh] border-b border-border flex space-y-4 items-center">
       <section className=" flex items-center mx-auto min-w-[1500px] h-full">
         <div className=" flex flex-col space-y-6 ">
           <h1 className="text-[80px] leading-[100px] font-bold">
@@ -87,7 +87,7 @@ const Hero = () => {
               className="w-full -z-10"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="hero-gradient"
             />
           </div>
         </section>

@@ -2,6 +2,9 @@ import { Inter } from "next/font/google";
 import Header from "@/components/header";
 import Hero from "@/components/sections/hero";
 import Image from "next/image"
+import BigIdea from "@/components/sections/big-idea";
+import RulesAndGuidelines from "@/components/sections/rules";
+import KeyAttributes from "@/components/sections/attrbutes";
 
 
 export default function Home() {
@@ -16,6 +19,9 @@ export default function Home() {
       />
       <Header />
       <Hero />
+      <BigIdea />
+      <RulesAndGuidelines />
+      <KeyAttributes/>
     </main>
   );
 }
