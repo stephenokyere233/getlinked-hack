@@ -10,6 +10,7 @@ import Timeline from "@/components/sections/timeline";
 import Prizes from "@/components/sections/prizes";
 import Partners from "@/components/sections/sponsers";
 import PrivacyPolicy from "@/components/sections/terms";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -25,7 +26,8 @@ export default function Home() {
       <Timeline />
       <Prizes />
       <Partners />
-      <PrivacyPolicy />
+        <PrivacyPolicy />
+        <Footer/>
     </main>
     </>
   );

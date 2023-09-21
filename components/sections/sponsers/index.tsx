@@ -23,7 +23,7 @@ const Partners = () => {
         <div className="text-center space-y-4">
           <h2 className="text-[32px] font-bold">Partners and Sponsors</h2>
           <p>
-            Getlinked Hackathon 1.0 is honored to have the following <br /> major
+            Getlinked Hackathon 1.0 is honored to have the following <br className="hidden lg:block"/> major
             companies as its partners and sponsors
           </p>
         </div>
