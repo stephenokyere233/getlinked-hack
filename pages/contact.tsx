@@ -1,15 +1,11 @@
-import Button from "@/components/button";
-import Flex from "@/components/flex";
-import SectionLayout from "@/layout/section.layout";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Link from "next/link";
 import React from "react";
-import { BiX } from "react-icons/bi";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import * as Yup from "yup";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import {MdOutlineArrowBackIos} from "react-icons/md"
+import { MdOutlineArrowBackIos } from "react-icons/md";
 
 const Contact = () => {
   const initialValues = {
@@ -29,7 +25,21 @@ const Contact = () => {
     console.log(values);
   };
   return (
-    <section className="relative min-h-[90vh] ">
+    <section className="relative overflow-clip min-h-[90vh] ">
+      <Image
+        src="/assets/mobile-hero-gradient.png"
+        className="w-[80%] lg:w-[800px] block absolute lg:bottom-20  left-0 -z-10"
+        width={500}
+        height={500}
+        alt="hero-gradient"
+      />
+      <Image
+        src="/assets/mobile-hero-gradient.png"
+        className="w-[800px] absolute hidden xl:block -bottom-[200px] -rotate-180  right-0 -z-10"
+        width={500}
+        height={500}
+        alt="hero-gradient"
+      />
       <div className=" flex items-center max-w-[1400px] mx-auto justify-center h-[90vh]">
         <section className="lg:w-[40%] hidden lg:block space-y-6 font-medium text-xl">
           <h2 className="text-[32px] text-pink font-semibold">Get in touch</h2>
@@ -71,7 +81,7 @@ const Contact = () => {
           </div>
         </section>
         <section className="lg:w-[50%] w-full ">
-          <div className="top-10 absolute left-10">
+          <div className="top-10 absolute left-4 md:">
             <button
               className="transition-all relative lg:hidden block active:scale-95"
               onClick={() => router.back()}
@@ -89,7 +99,7 @@ const Contact = () => {
             </button>
           </div>
           <div className="lg:bg-zinc-300 lg:bg-opacity-5 flex flex-col space-y-4 rounded-[5px] lg:py-16">
-            <div className="w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
+            <div className="w-[90%]  md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
               <h2 className="font-semibold text-pink mb-6 text-[22px] lg:text-[25px]">
                 Questions or need assistance?
                 <br />

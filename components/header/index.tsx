@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../logo";
-import Button from "../button";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
@@ -52,7 +51,9 @@ const Header = () => {
               </Link>
             ))}
           </motion.nav>
-          <button className="btn-primary w-[200px] mt-4"> Register</button>
+          <Link href="/register">
+            <button className="btn-primary w-[200px] mt-4"> Register</button>
+          </Link>
         </motion.div>
       </AnimatePresence>
     );
