@@ -46,7 +46,9 @@ export default function App({ Component, pageProps }: AppProps) {
           --clash-font: ${clash.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
     </>
   );
 }

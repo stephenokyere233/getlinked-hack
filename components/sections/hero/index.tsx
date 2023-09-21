@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Button from "@/components/button";
 
 const MobileHeroText = () => {
   return (
     <>
-      <section className="flex xl:hidden  xl:flex-row mt-10 flex-col px-4 items-center mx-auto w-full justify-center  h-full">
+      <section className="flex xl:hidden z-[20]  xl:flex-row mt-10 flex-col px-4 items-center mx-auto w-full justify-center  h-full">
         <div className="flex text-center  flex-col space-y-6 ">
           <h3 className=" md:text-2xl lg:text-3xl  italic tracking-wide font-bold">
             Igniting a Revolution in
@@ -48,7 +47,7 @@ const MobileHeroText = () => {
             Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize
           </p>
           <div className="mx-auto">
-            <Button label="Register" />
+            <button className="btn-primary">Register</button>
           </div>
           <div className="flex gap-6 w-max mx-auto unica-one items-center text-[40px]">
             <div className="">
@@ -127,7 +126,7 @@ const DesktopHeroText = () => {
             Participate in getlinked tech Hackathon 2023 stand <br /> a chance to win a
             Big prize
           </p>
-          <Button label="Register" />
+              <button className="btn-primary w-[200px]">Register</button>
           <div className="flex gap-6 unica-one items-center text-[60px]">
             <div className="">
               <span className="">00</span>

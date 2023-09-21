@@ -13,18 +13,18 @@ const FAQS = () => {
   ];
   return (
     <section className="border-b border-border relative py-20">
-      <SectionLayout className="py-20 my-6">
+      <SectionLayout className="lg:py-20 my-6">
         <Flex className="justify-between flex-col-reverse" reverse={true}>
           <div className="relative w-full lg:w-[50%] ">
             <div className="relative">
               <Image
                 src="/assets/faqs.png"
-                className="w-full"
+                className="w-full mt-10 lg:mt-0"
                 width={1000}
                 height={1000}
                 alt="hero-man"
               />
-              <div className="-top-[80px] items-baseline flex gap-20 left-[100px] -z-10  absolute">
+              <div className="-top-[80px] -z-10 items-baseline flex gap-20 left-[50px] scale-[0.6] md:scale-100 lg:left-[100px]   absolute">
                 <Image
                   src="/assets/question-small.png"
                   className="w-[50px] pb-10"
@@ -87,17 +87,16 @@ const FAQS = () => {
               <span className="text-pink">Questions</span>
             </h2>
             <p>
-              We got answers to the questions that you might <br /> want to ask about{" "}
+              We got answers to the questions that you might <br className="hidden lg:block" /> want to ask about{" "}
               <span className="font-bold">getlinked Hackathon 1.0</span>
             </p>
 
-            <ul className="space-y-10 pt-4">
+            <ul className="space-y-10 pt-4 px-4">
               {faqs.map((faq) => {
                 return (
                   <li key={faq}>
-                    <p className="font-bold border-b border-pink py-2 text-[16px] flex items-center justify-between">
+                    <p className="font-bold border-b border-pink py-2 text-[14px] text-start md:text-[16px] flex items-center justify-between">
                       <span>{faq} </span>
-
                       <span className="text-[#FF25B8] text-2xl">+</span>
                     </p>
                   </li>

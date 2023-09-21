@@ -17,7 +17,6 @@ export default function Home() {
     <>
     <main className={`min-h-screen relative`}>
     
-      <Header />
       <Hero />
       <BigIdea />
       <RulesAndGuidelines />
