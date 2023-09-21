@@ -1,6 +1,7 @@
 import Flex from "@/components/flex";
 import React from "react";
 import Image from "next/image";
+import SectionLayout from "@/layout/section.layout";
 
 const RulesAndGuidelines = () => {
   return (
@@ -19,19 +20,19 @@ const RulesAndGuidelines = () => {
         height={500}
         alt="hero-gradient"
       />
-      <div className="max-w-[1500px] mx-auto">
+      <SectionLayout>
         <Flex className="justify-between" reverse={true}>
           <div className="relative w-full lg:w-[50%] ">
             <Image
               src="/assets/rules.png"
-              className="w-full  object-contain"
-              width={1000}
-              height={1000}
+              className="mx-auto lg:w-full object-contain"
+              width={500}
+              height={500}
               alt="hero-man"
             />
             <Image
               src="/assets/arrow.png"
-              className="absolute w-[100px] bottom-0 -right-10"
+              className="absolute hidden lg:block w-[100px] bottom-0 lg:right-10 -right-10"
               width={500}
               height={500}
               alt="hero-man"
@@ -59,7 +60,7 @@ const RulesAndGuidelines = () => {
             </p>
           </div>
         </Flex>
-      </div>
+      </SectionLayout>
     </section>
   );
 };

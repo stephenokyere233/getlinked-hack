@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Flex from "@/components/flex";
+import SectionLayout from "@/layout/section.layout";
 
 const FAQS = () => {
   const faqs = [
@@ -9,12 +10,11 @@ const FAQS = () => {
     "What happens if I don't have an idea for a project?",
     "Can I join a team or do I have to come with one?",
     "What happens after the hackathon ends",
-    "Can I work on a project I started before the hackathon?",
   ];
   return (
     <section className="border-b border-border relative py-20">
-      <div className="max-w-[1500px] mx-auto py-20 my-6">
-        <Flex className="justify-between" reverse={true}>
+      <SectionLayout className="py-20 my-6">
+        <Flex className="justify-between flex-col-reverse" reverse={true}>
           <div className="relative w-full lg:w-[50%] ">
             <div className="relative">
               <Image
@@ -52,7 +52,7 @@ const FAQS = () => {
               </div>
             </div>
             <Image
-              src="/assets/star-pink.png"
+              src="/assets/star-pink.svg"
               className=" w-[30px] absolute top-[130px] left-[120px]"
               width={500}
               height={500}
@@ -106,7 +106,7 @@ const FAQS = () => {
             </ul>
           </div>
         </Flex>
-      </div>
+      </SectionLayout>
     </section>
   );
 };
