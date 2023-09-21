@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 
 const Footer = () => {
-  const data: { name: string; link: string }[] = [
+  const data: { name: string; link: string }|any[] = [
     {
       name: "Overview",
       link: "#",
