@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Flex from "@/components/flex";
+import SectionLayout from "@/layout/section.layout";
 
 const KeyAttributes = () => {
   const keys = [
@@ -41,7 +42,7 @@ const KeyAttributes = () => {
         height={500}
         alt="hero-gradient"
       />
-      <div className="max-w-[1500px] mx-auto">
+      <SectionLayout>
         <Flex className="justify-between">
           <div className="relative w-full lg:w-[50%] ">
             <div className="relative">
@@ -63,7 +64,8 @@ const KeyAttributes = () => {
                 <Image
                   src="/assets/ellipse.svg"
                   width={1000}
-                  height={1000}
+                                  height={1000}
+                                  className="hidden lg:block"
                   alt="hero-man"
                 />
               </div>
@@ -108,7 +110,7 @@ const KeyAttributes = () => {
             <button className="btn-primary">Read More</button>
           </div>
         </Flex>
-      </div>
+      </SectionLayout>
     </section>
   );
 };

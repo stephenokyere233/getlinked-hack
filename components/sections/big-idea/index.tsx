@@ -1,16 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import Flex from "@/components/flex";
+import SectionLayout from "@/layout/section.layout";
 
 const BigIdea = () => {
   return (
     <section className="border-b border-border py-20">
-      <div className="max-w-[1500px] mx-auto">
+      <SectionLayout>
         <Flex className="justify-between">
           <div className="relative w-full lg:w-[40%] ">
             <Image
               src="/assets/idea.png"
-              className="w-full  object-contain"
+              className="object-contain mx-auto"
               width={500}
               height={500}
               alt="hero-man"
@@ -20,7 +21,7 @@ const BigIdea = () => {
             </h3>
             <Image
               src="/assets/arrow.png"
-              className="absolute w-[100px] bottom-0 -right-10"
+              className="absolute w-[30px] lg:w-[100px] bottom-0 right-[45%] lg:-right-10"
               width={500}
               height={500}
               alt="hero-man"
@@ -48,7 +49,7 @@ const BigIdea = () => {
             </p>
           </div>
         </Flex>
-      </div>
+      </SectionLayout>
     </section>
   );
 };

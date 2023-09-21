@@ -10,7 +10,7 @@ const Flex: FC<{ children: ReactNode; reverse?: boolean; className?: string }> =
     <div
       className={`flex flex-col lg:flex-row items-center ${
         reverse && "lg:flex-row-reverse"
-      } gap-4 md:gap-6 lg:gap-20 ${className}`}
+      } gap-14 lg:gap-20 ${className}`}
     >
       {children}
     </div>
