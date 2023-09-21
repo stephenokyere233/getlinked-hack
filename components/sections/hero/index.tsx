@@ -54,7 +54,7 @@ const Hero = () => {
       </section>
       <section className="absolute w-[800px]   right-0  bottom-0">
         <section className="relative">
-          <h3 className="absolute text-4xl italic tracking-wider font-bold">
+          <h3 className="absolute  text-4xl italic -left-[30px] tracking-wider font-bold">
             Igniting a Revolution in
             <span className="relative">
               <span> HR Innovation</span>
