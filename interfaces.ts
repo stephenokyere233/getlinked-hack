@@ -1,11 +1,9 @@
 export interface StoreState extends StoreAction {
   showMenu: boolean;
 }
-
 export interface StoreAction {
   setShowMenu: (showMenu: StoreState["showMenu"]) => void;
 }
-
 export interface RegisterForm {
   teamName: string;
   phone: string;
@@ -15,8 +13,6 @@ export interface RegisterForm {
   groupSize: string;
   agree: boolean;
 }
-
-
 export interface ContactForm {
   firstName: string;
   email: string;

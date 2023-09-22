@@ -19,8 +19,18 @@ const MobileHeroText = () => {
               />
             </span>
           </h3>
-          <h1 className="text-[36px] md:text-[40px] lg:text-[50px]  font-bold">
-            <span>getlinked Tech </span> <br />
+          <h1 className="text-[36px] pt-8 md:pt-10 md:text-[40px] lg:text-[50px]  font-bold">
+            <span className="relative">
+              getlinked Tech
+              <Image
+                src="/assets/light.png"
+                alt="chain"
+                className="absolute w-[30px] md:w-[40px] md:h-[50px] -top-8 md:-top-10 right-4 h-[40px]"
+                width={500}
+                height={500}
+              />
+            </span>{" "}
+            <br />
             <span className="flex items-center w-max mx-auto">
               <span>
                 Hackathon <span className="text-pink">1.0</span>
@@ -102,9 +112,9 @@ const DesktopHeroText = () => {
             <span className="relative">
               getlinked Tech
               <Image
-                src="/assets/boom.png"
+                src="/assets/light.png"
                 alt="chain"
-                className="absolute w-[60px] -top-12 right-12 h-[80px]"
+                className="absolute w-[60px] -top-14 right-10 h-[80px]"
                 width={500}
                 height={500}
               />

@@ -61,7 +61,7 @@ const Prices = () => {
           <div className="relative w-full lg:w-[50%] ">
             <Image
               src="/assets/rewards.png"
-              className="w-full"
+              className="w-full mt-4 lg:mt-10"
               width={1000}
               height={1000}
               alt="hero-man"

@@ -131,16 +131,16 @@ const Register = () => {
                 </h2>
                 <div className="flex gap-2 items-baseline">
                   <p>Be part of this movement!</p>
-                  <div className="border-b relative items-center justify-center flex gap-2 border-dashed border-pink min-w-[100px] md:min-w-[150px]">
+                  <div className="border-b relative items-center justify-center flex border-dashed border-pink min-w-[100px] md:min-w-[150px]">
                     <Image
-                      src="/assets/star-pink.svg"
+                      src="/assets/move-girl.png"
                       className=" w-[20px] lg:w-[30px]"
                       width={500}
                       height={500}
                       alt="star"
                     />
                     <Image
-                      src="/assets/star.svg"
+                      src="/assets/move-boy.png"
                       width={500}
                       className="w-[20px] lg:w-[30px]"
                       height={500}
