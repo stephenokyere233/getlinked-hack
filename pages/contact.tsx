@@ -6,26 +6,57 @@ import * as Yup from "yup";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import toast from "react-hot-toast";
+
+interface ContactForm {
+  firstName: string;
+  email: string;
+  message: string;
+}
 
 const Contact = () => {
-  const initialValues = {
+  const router = useRouter();
+  const initialValues:ContactForm = {
     firstName: "",
     email: "",
     message: "",
   };
 
-  const router = useRouter();
+  const sendForm = (data: ContactForm) => {
+    fetch("https://backend.getlinked.ai/hackathon/contact-form", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        first_name: data.firstName,
+        email: data.email,
+        message: data.message,
+      }),
+    })
+      .then((res) => res.json())
+      .then((_) => {
+        toast.success("Thank you for contacting us!");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const validationSchema = Yup.object().shape({
-    fullName: Yup.string().required("Please enter your full name"),
+    firstName: Yup.string().required("Please enter your first name"),
     email: Yup.string().email("Invalid email"),
-    message: Yup.string(),
+    message: Yup.string()
+      .required("Please send us a message")
+      .min(20, "Message should be more than 20 characters"),
   });
 
-  const handleSubmit = async (values: any, { resetForm }: any) => {
-    console.log(values);
+  const handleSubmit = async (values: ContactForm, { resetForm }: any) => {
+    sendForm(values);
+    resetForm(initialValues);
   };
   return (
-    <section className="relative overflow-clip min-h-[90vh] ">
+    <section className="relative overflow-clip lg:min-h-[90vh] ">
       <Image
         src="/assets/mobile-hero-gradient.png"
         className="w-[80%] lg:w-[800px] block absolute lg:bottom-20  left-0 -z-10"
@@ -98,7 +129,7 @@ const Contact = () => {
               </span>
             </button>
           </div>
-          <div className="lg:bg-zinc-300 lg:bg-opacity-5 flex flex-col space-y-4 rounded-[5px] lg:py-16">
+          <div className="lg:bg-zinc-300 lg:bg-opacity-5 flex flex-col py-10 space-y-4 rounded-[5px] lg:py-16">
             <div className="w-[90%]  md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
               <h2 className="font-semibold text-pink mb-6 text-[22px] lg:text-[25px]">
                 Questions or need assistance?
@@ -121,7 +152,7 @@ const Contact = () => {
                         className="border p-4 bg-zinc-300 bg-opacity-5 rounded-md w-full"
                       />
                       <ErrorMessage
-                        name="fullName"
+                        name="firstName"
                         component="div"
                         className="text-red-500"
                       />
