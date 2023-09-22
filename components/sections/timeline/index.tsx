@@ -56,7 +56,7 @@ const Timeline = () => {
     );
   };
   return (
-    <section data-aos="fade-up" className=" relative py-20" id="timeline">
+    <section data-aos="fade-up" className="scroll-m-[150px] relative py-20" id="timeline">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center space-y-4 lg:space-y-6">
           <h2 className="text-[32px] font-bold">Timeline</h2>

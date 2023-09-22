@@ -10,7 +10,6 @@ import toast from "react-hot-toast";
 import { ContactForm } from "@/interfaces";
 import { motion } from "framer-motion";
 
-
 const Contact = () => {
   const router = useRouter();
   const initialValues: ContactForm = {
@@ -53,17 +52,17 @@ const Contact = () => {
     resetForm(initialValues);
   };
   return (
-    <section className="relative overflow-clip lg:min-h-[90vh] ">
+    <section className="relative overflow-x-clip lg:h-[90vh] xl:overflow-clip ">
       <Image
         src="/assets/mobile-hero-gradient.png"
-        className="w-[80%] lg:w-[800px] block absolute lg:bottom-20  left-0 -z-10"
+        className="w-[80%] lg:w-[800px] block  absolute lg:bottom-20  left-0 -z-10"
         width={500}
         height={500}
         alt="hero-gradient"
       />
       <Image
         src="/assets/mobile-hero-gradient.png"
-        className="w-[800px] absolute hidden xl:block -bottom-[200px] -rotate-180  right-0 -z-10"
+        className="w-[800px] absolute hidden xl:block -bottom-[200px] -rotate-180 -right-20 -z-10"
         width={500}
         height={500}
         alt="hero-gradient"
@@ -115,53 +114,53 @@ const Contact = () => {
             </ul>
           </div>
         </section>
-        <section className="lg:w-[50%] w-full ">
-          <div className="top-10 absolute left-4 md:">
-            <button
-              className="transition-all relative lg:hidden block active:scale-95"
-              onClick={() => router.back()}
-            >
-              <Image
-                src="/assets/close.svg"
-                className=" w-[30px] "
-                width={500}
-                height={500}
-                alt="hero-man"
-              />
-              <span className="absolute inset-0 w-full flex items-center justify-center ">
-                <MdOutlineArrowBackIos size={20} />
-              </span>
-            </button>
-          </div>
+        <section className="lg:w-[50%] relative w-full ">
           <motion.div
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.5 }}
-            className="lg:bg-zinc-300 relative lg:bg-opacity-5 flex flex-col py-10 space-y-4 rounded-[5px] lg:py-16"
+            className="lg:bg-zinc-300 relative lg:bg-opacity-5 flex flex-col py-10 space-y-4 pt-28 rounded-[5px] lg:py-16"
           >
+            <div className="top-[100px] absolute left-4">
+              <button
+                className="transition-all relative lg:hidden block active:scale-95"
+                onClick={() => router.back()}
+              >
+                <Image
+                  src="/assets/close.svg"
+                  className=" w-[30px] "
+                  width={500}
+                  height={500}
+                  alt="hero-man"
+                />
+                <span className="absolute inset-0 w-full flex items-center justify-center ">
+                  <MdOutlineArrowBackIos size={20} />
+                </span>
+              </button>
+            </div>
             <Image
               src="/assets/star-purple.png"
               className=" w-[20px] lg:w-[30px] absolute bottom-[100px] left-4 lg:-left-4"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
             <Image
               src="/assets/star-gray.png"
               className=" w-[20px] lg:w-[30px] absolute -top-[20px] lg:-top-[50px] right-4 lg:-right-[100px]"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
             <Image
               src="/assets/star.svg"
-              className="absolute w-[30px] bottom-0 -right-[150px]"
+              className="absolute w-[20px] lg:w-[30px] bottom-0 right-4 lg:-right-[150px]"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
-            <div className="w-[90%] md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
+            <div className="w-[90%]  md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
               <h2 className="font-semibold text-pink my-6 lg:mb-6 lg:mt-0 text-[22px] lg:text-[25px]">
                 Questions or need assistance?
                 <br />
@@ -173,7 +172,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
               >
                 <Form>
-                  <fieldset className=" space-y-8 lg:space-y-10 ">
+                  <fieldset className=" space-y-8  lg:space-y-10 ">
                     <div className="">
                       <Field
                         type="text"

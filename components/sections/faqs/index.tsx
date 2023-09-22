@@ -82,7 +82,7 @@ const FAQS = () => {
   return (
     <section
       data-aos="zoom-in-up"
-      className="border-b border-border relative py-20"
+      className="border-b scroll-m-[120px] border-border relative py-20"
       id="faqs"
     >
       <SectionLayout className="lg:py-20 my-6">
