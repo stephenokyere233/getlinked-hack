@@ -7,12 +7,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import toast from "react-hot-toast";
+import { ContactForm } from "@/interfaces";
 
-interface ContactForm {
-  firstName: string;
-  email: string;
-  message: string;
-}
 
 const Contact = () => {
   const router = useRouter();

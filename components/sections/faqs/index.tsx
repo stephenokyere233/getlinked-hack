@@ -80,7 +80,7 @@ const FAQS = () => {
   };
 
   return (
-    <section className="border-b border-border relative py-20">
+    <section className="border-b border-border relative py-20" id="faqs">
       <SectionLayout className="lg:py-20 my-6">
         <Flex className="justify-between flex-col-reverse" reverse={true}>
           <div className="relative w-full lg:w-[50%] ">

@@ -6,30 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useStore } from "@/store";
 import { BiX } from "react-icons/bi";
 import { useRouter } from "next/router";
+import { ROUTES } from "@/constants";
 
 const Header = () => {
   const showMenu = useStore((state) => state.showMenu);
   const router = useRouter();
   const setShowMenu = useStore((state) => state.setShowMenu);
-  console.log(router)
-  const routes = [
-    {
-      name: "Timeline",
-      path: "#",
-    },
-    {
-      name: "Overview",
-      path: "#",
-    },
-    {
-      name: "FAQs",
-      path: "#faqs",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
 
   const DropDownMenu = () => {
     return (
@@ -46,51 +28,53 @@ const Header = () => {
             exit={{ opacity: 0 }}
             className="flex flex-col gap-4"
           >
-            {routes.map((route) => (
-              <Link key={route.name} className={`text-[18px] px-4 py-3`} href={route.path}>
+            {ROUTES.map((route) => (
+              <Link
+                key={route.name}
+                className={`text-[18px] hover:text-purple ${
+                  router.asPath === route.path ? "text-line-gradient" : ""
+                } px-4 py-3`}
+                href={route.path}
+              >
                 {route.name}
               </Link>
             ))}
           </motion.nav>
           <Link href="/register">
-            <button className="btn-primary w-[200px] mt-4"> Register</button>
+            <button className="bg-primary-gradient w-[200px] mt-4 items-center rounded-md justify-center active:scale-95 h-[50px] flex lg:hidden">
+              <div className="px-8 w-[98%] h-[95%] text-xl flex items-center justify-center transition-all  hover:bg-background rounded-md ">
+                Register
+              </div>
+            </button>
           </Link>
         </motion.div>
       </AnimatePresence>
     );
   };
   return (
-    <header className=" px-4 h-24  py-6 border-b  relative border-border">
-      {router.asPath === "/" && (
-        <>
-          <Image
-            src="/assets/hero-gradient.png"
-            className=" w-full lg:w-[50%]  -rotate-90 absolute hidden xl:block -top-10 left-0 lg:left-20  -z-10"
-            width={500}
-            height={500}
-            alt="hero-gradient"
-          />
-          <Image
-            src="/assets/mobile-hero-gradient.png"
-            className="w-full md:w-[80%] absolute xl:hidden left-0 -z-10"
-            width={500}
-            height={500}
-            alt="hero-gradient"
-          />
-        </>
-      )}
+    <header className=" px-4 h-24 sticky top-0 py-6 border-b bg-background bg-opacity-40 z-[30] border-border">
       <div className="mx-auto max-w-[1500px] flex items-center justify-between">
         <Logo />
         <nav className="hidden lg:flex gap-10">
-          {routes.map((route) => (
-            <Link key={route.name} className="text-[18px]" href={route.path}>
+          {ROUTES.map((route) => (
+            <Link
+              key={route.name}
+              className={`text-[18px] hover:text-purple active:scale-95 ${
+                router.asPath === route.path ? "text-line-gradient" : ""
+              } `}
+              href={route.path}
+            >
               {route.name}
             </Link>
           ))}
         </nav>
 
         <Link href="/register">
-          <button className="btn-primary  hidden lg:block"> Register</button>
+          <button className="bg-primary-gradient w-[160px] items-center rounded-md justify-center active:scale-95 h-[50px] hidden lg:flex">
+            <div className="px-8 w-[98%] h-[95%] text-xl flex items-center justify-center transition-all  hover:bg-background rounded-md ">
+              Register
+            </div>
+          </button>
         </Link>
         {showMenu ? (
           <>

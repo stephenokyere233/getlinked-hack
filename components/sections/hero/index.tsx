@@ -99,7 +99,17 @@ const DesktopHeroText = () => {
       <section className=" xl:flex hidden xl:flex-row flex-col  px-4 items-center mx-auto  lg:min-w-[1400px] h-full">
         <div className=" xl:flex hidden flex-col space-y-6 ">
           <h1 className="text-[80px] leading-[100px] font-bold">
-            <span>getlinked Tech </span> <br />
+            <span className="relative">
+              getlinked Tech
+              <Image
+                src="/assets/boom.png"
+                alt="chain"
+                className="absolute w-[60px] -top-12 right-12 h-[80px]"
+                width={500}
+                height={500}
+              />
+            </span>{" "}
+            <br />
             <span className="flex items-center">
               <span>
                 Hackathon <span className="text-pink">1.0</span>

@@ -3,11 +3,13 @@ import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import SuccessModal from "@/components/modals/success.modal";
+import { RegisterForm } from "@/interfaces";
+
 
 const Register = () => {
   const [showSuccess, setShowSuccess] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-  const initialValues = {
+  const initialValues: RegisterForm = {
     teamName: "",
     phone: "",
     email: "",
@@ -29,7 +31,7 @@ const Register = () => {
       .required("Please confirm before submitting"),
   });
 
-  const sendForm = (data: any) => {
+  const sendForm = (data: RegisterForm) => {
     setLoading(true);
     fetch("https://backend.getlinked.ai/hackathon/registration", {
       method: "POST",
@@ -49,7 +51,7 @@ const Register = () => {
       .then((res) => res.json())
       .then((_) => {
         setShowSuccess(true);
-        setLoading(false)
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -62,7 +64,7 @@ const Register = () => {
     resetForm(initialValues);
   };
   return (
-    <section className="relative  overflow-clip lg:min-h-[90vh] ">
+    <section className="relative overflow-clip lg:min-h-[90vh] ">
       <Image
         src="/assets/mobile-hero-gradient.png"
         className="w-[80%] lg:w-[800px] block absolute lg:bottom-20  left-0 -z-10"
@@ -127,7 +129,25 @@ const Register = () => {
                 <h2 className="font-semibold hidden lg:block text-pink mb-6 text-[22px] lg:text-[25px]">
                   Register
                 </h2>
-                <p>Be part of this movement!</p>
+                <div className="flex gap-2 items-baseline">
+                  <p>Be part of this movement!</p>
+                  <div className="border-b relative items-center justify-center flex gap-2 border-dashed border-pink min-w-[100px] md:min-w-[150px]">
+                    <Image
+                      src="/assets/star-pink.svg"
+                      className=" w-[20px] lg:w-[30px]"
+                      width={500}
+                      height={500}
+                      alt="star"
+                    />
+                    <Image
+                      src="/assets/star.svg"
+                      width={500}
+                      className="w-[20px] lg:w-[30px]"
+                      height={500}
+                      alt="star"
+                    />
+                  </div>
+                </div>
                 <h2 className="text-[25px] tracking-wide">CREATE YOUR ACCOUNT</h2>
               </div>
               <Formik

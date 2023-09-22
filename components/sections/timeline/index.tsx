@@ -1,39 +1,6 @@
-import React from "react";
+import { TIMELINES } from "@/constants";
 
 const Timeline = () => {
-  const list = [
-    {
-      title: "Hackathon Announcement",
-      text: `The getlinked tech hackathon 1.0 is formally announced <br class="hidden xl:block"/>
-to the general public and teams begin to get ready to register`,
-    },
-    {
-      title: "Teams Registration begins",
-      text: `Interested teams can now show their interest in the <br class="hidden xl:block"/>
-getlinked tech hackathon 1.0 2023 by proceeding to register`,
-    },
-    {
-      title: "Teams Registration ends",
-      text: `Interested Participants are no longer Allowed to <br class="hidden lg:block"/>
-register`,
-    },
-    {
-      title: `Announcement of the accepted teams and ideas`,
-      text: `All teams whom idea has been accepted into getlinked tech <br class="hidden xl:block"/>
-hackathon 1.0 2023 are formally announced`,
-    },
-    {
-      title: "Getlinked Hackathon 1.0 Offically Begins",
-      text: `Accepted teams can now proceed to build their <br class="hidden xl:block"/>
-ground breaking skill driven solutions`,
-    },
-    {
-      title: `Demo Day`,
-      text: `Teams get the opportunity to pitch their projects to judges. <br class="hidden xl:block"/>
-The winner of the hackathon will also be announced on <br class="hidden lg:block"/>
-this day`,
-    },
-  ];
   const Row = ({ reverse = false, text = "", title = "", index = 0 }) => {
     return (
       <>
@@ -86,7 +53,7 @@ this day`,
     );
   };
   return (
-    <section className=" relative py-20">
+    <section className=" relative py-20" id="timeline">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center space-y-4 lg:space-y-6">
           <h2 className="text-[32px] font-bold">Timeline</h2>
@@ -97,7 +64,7 @@ this day`,
         </div>
         <div className="py-2 lg:py-10 w-full mx-auto my-4 lg:my-6">
           <div className="space-y-4 px-6 md:px-10 lg:px-4">
-            {list.map((item, index) => {
+            {TIMELINES.map((item, index) => {
               return (
                 <Row
                   key={item.title}

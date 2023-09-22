@@ -4,27 +4,9 @@ import Link from "next/link";
 import SectionLayout from "@/layout/section.layout";
 import Image from "next/image";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import { FOOTER_LINKS } from "@/constants";
 
 const Footer = () => {
-  const data: { name: string; link: string }|any[] = [
-    {
-      name: "Overview",
-      link: "#",
-    },
-    {
-      name: "Timeline",
-      link: "#",
-    },
-    ,
-    {
-      name: "FAQS ",
-      link: "#",
-    },
-    {
-      name: "Register",
-      link: "#",
-    },
-  ];
   return (
     <footer className="relative pt-20 ">
       <Image
@@ -57,11 +39,15 @@ const Footer = () => {
         <div className="flex flex-col justify-between">
           <h3 className="text-pink text-[20px] font-bold ">Useful Links</h3>
           <ul className="space-y-4">
-            {data.map((link) => (
-              <li key={link.name}>
-                <Link href={link.link}>{link.name}</Link>
-              </li>
-            ))}
+            {FOOTER_LINKS.map((link) => {
+              return (
+                link && (
+                  <li key={link.name}>
+                    <Link href={link.path}>{link.name}</Link>
+                  </li>
+                )
+              );
+            })}
           </ul>
           <div className="flex gap-4">
             <h3 className="text-pink text-[20px] font-bold">Follow us</h3>
