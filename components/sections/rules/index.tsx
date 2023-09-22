@@ -5,7 +5,7 @@ import SectionLayout from "@/layout/section.layout";
 
 const RulesAndGuidelines = () => {
   return (
-    <section className="border-b border-border relative py-20">
+    <section data-aos="fade-up" className="border-b border-border relative py-20">
       <Image
         src="/assets/idea-gradient.png"
         className="absolute w-[1200px] bottom-0 -z-10 "

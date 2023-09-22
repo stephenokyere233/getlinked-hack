@@ -4,8 +4,8 @@ import Image from "next/image";
 const MobileHeroText = () => {
   return (
     <>
-      <section className="flex  xl:hidden z-[20]  xl:flex-row mt-10 flex-col px-4 items-center mx-auto w-full justify-center  h-full">
-        <div  className="flex text-center  flex-col space-y-6 ">
+      <section className="flex xl:hidden z-[20]  xl:flex-row mt-10 flex-col px-4 items-center mx-auto w-full justify-center  h-full">
+        <div data-aos="zoom-in" className="flex text-center  flex-col space-y-6 ">
           <h3 className=" md:text-2xl lg:text-3xl  italic tracking-wide font-bold">
             Igniting a Revolution in
             <span className="relative ">
@@ -75,7 +75,7 @@ const MobileHeroText = () => {
           </div>
         </div>
       </section>
-      <section  className=" w-full lg:scale-[0.8] block xl:hidden">
+      <section data-aos="fade-up-right" className=" w-full lg:scale-[0.8] block xl:hidden">
         <section className="relative">
           <Image
             src="/assets/hero-man.png"

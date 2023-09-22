@@ -35,7 +35,7 @@ const MainLayout: FC<{ children: ReactNode }> = ({ children }) => {
   }, []);
 
   return (
-    <div className="flex min-h-[100dvh] flex-col">
+    <div className="flex flex-col">
       <Header />
       <main
         onClick={() => {

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const PrivacyPolicy = () => {
   return (
-    <section className="relative py-10 lg:py-20">
+    <section data-aos="fade-up" className="relative py-10 lg:py-20">
       <SectionLayout className=" py-10 lg:py-20 ">
         <Flex className="justify-between">
           <div className="relative w-full lg:w-[45%] ">

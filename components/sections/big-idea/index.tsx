@@ -5,7 +5,7 @@ import SectionLayout from "@/layout/section.layout";
 
 const BigIdea = () => {
   return (
-    <section className="border-b border-border py-20" id="overview">
+    <section data-aos="fade-up" className="border-b border-border py-20" id="overview">
       <SectionLayout>
         <Flex className="justify-between">
           <div data-aos="zoom-in" className="relative w-full lg:w-[40%] ">

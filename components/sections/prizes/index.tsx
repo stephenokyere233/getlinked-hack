@@ -42,7 +42,7 @@ const Prices = () => {
           </div>
         </div>
         <Flex className="justify-between">
-          <div className="relative w-full lg:w-[40%] ">
+          <div data-aos="zoom-in-right" className="relative w-full lg:w-[40%] ">
             <Image
               src="/assets/trophy.png"
               className="w-full"
@@ -58,7 +58,7 @@ const Prices = () => {
               alt="hero-man"
             />
           </div>
-          <div className="relative w-full lg:w-[50%] ">
+          <div data-aos="zoom-in-left" className="relative w-full lg:w-[50%] ">
             <Image
               src="/assets/rewards.png"
               className="w-full mt-4 lg:mt-10"

@@ -6,7 +6,6 @@ const SectionLayout: FC<{ className?: string; children: ReactNode }> = ({
 }) => {
   return (
     <div
-      data-aos="fade-up"
       style={{ maxWidth: "1380px", paddingInline: "20px", margin: "20px auto" }}
       className={`${className} `}
     >

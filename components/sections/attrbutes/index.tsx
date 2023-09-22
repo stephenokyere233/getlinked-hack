@@ -6,7 +6,7 @@ import { KEYS_ATTRIBUTES } from "@/constants";
 
 const KeyAttributes = () => {
   return (
-    <section className="border-b border-border relative py-20">
+    <section data-aos="fade-up" className="border-b border-border relative py-20">
       <Image
         src="/assets/idea-gradient.png"
         className="absolute w-[1000px] -z-10 "

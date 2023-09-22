@@ -27,7 +27,7 @@ p {
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  @apply bg-background text-white overflow-x-hidden;
+  @apply bg-background text-white overflow-x-clip;
 }
 
 .unica-one {
