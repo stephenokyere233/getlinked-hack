@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import toast from "react-hot-toast";
 import SuccessModal from "@/components/modals/success.modal";
 
 const Register = () => {

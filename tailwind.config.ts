@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "primary-gradient": "linear-gradient(270deg, #903AFF 0%, #FE34B9 100%)",
+        "line-gradient": "linear-gradient(270deg, #903AFF 0%, #D434FE 100%)",
       },
       colors: {
         background: "#150E28",

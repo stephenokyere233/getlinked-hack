@@ -49,19 +49,19 @@ const MobileHeroText = () => {
           <div className="mx-auto">
             <button className="btn-primary">Register</button>
           </div>
-          <div className="flex gap-6 w-max mx-auto unica-one items-center text-[40px]">
-            <div className="">
+          <div className="flex gap-6 w-max unica-one mx-auto items-center text-[40px]">
+            <span className="">
               <span className="">00</span>
               <span className="uppercase text-[18px]">h</span>
-            </div>
-            <div className="">
+            </span>
+            <span className="">
               <span className="">00</span>
               <span className="uppercase text-[18px]">m</span>
-            </div>
-            <div className="">
+            </span>
+            <span className="">
               <span className="">00</span>
               <span className="uppercase text-[18px]">s</span>
-            </div>
+            </span>
           </div>
         </div>
       </section>
@@ -126,20 +126,20 @@ const DesktopHeroText = () => {
             Participate in getlinked tech Hackathon 2023 stand <br /> a chance to win a
             Big prize
           </p>
-              <button className="btn-primary w-[200px]">Register</button>
+          <button className="btn-primary w-[200px]">Register</button>
           <div className="flex gap-6 unica-one items-center text-[60px]">
-            <div className="">
+            <span className="">
               <span className="">00</span>
               <span className="uppercase text-[18px]">h</span>
-            </div>
-            <div className="">
+            </span>
+            <span className="">
               <span className="">00</span>
               <span className="uppercase text-[18px]">m</span>
-            </div>
-            <div className="">
+            </span>
+            <span className="">
               <span className="">00</span>
               <span className="uppercase text-[18px]">s</span>
-            </div>
+            </span>
           </div>
         </div>
       </section>

@@ -11,7 +11,8 @@ const Header = () => {
   const showMenu = useStore((state) => state.showMenu);
   const router = useRouter();
   const setShowMenu = useStore((state) => state.setShowMenu);
-  const Routes = [
+  console.log(router)
+  const routes = [
     {
       name: "Timeline",
       path: "#",
@@ -45,8 +46,8 @@ const Header = () => {
             exit={{ opacity: 0 }}
             className="flex flex-col gap-4"
           >
-            {Routes.map((route) => (
-              <Link key={route.name} className="text-[18px] px-4 py-3" href={route.path}>
+            {routes.map((route) => (
+              <Link key={route.name} className={`text-[18px] px-4 py-3`} href={route.path}>
                 {route.name}
               </Link>
             ))}
@@ -81,7 +82,7 @@ const Header = () => {
       <div className="mx-auto max-w-[1500px] flex items-center justify-between">
         <Logo />
         <nav className="hidden lg:flex gap-10">
-          {Routes.map((route) => (
+          {routes.map((route) => (
             <Link key={route.name} className="text-[18px]" href={route.path}>
               {route.name}
             </Link>

@@ -9,7 +9,7 @@ const clash = localFont({
     {
       path: "../public/fonts/ClashDisplay-Bold.otf",
       weight: "700",
-      style: "bold",
+      style: "normal",
     },
     {
       path: "../public/fonts/ClashDisplay-Semibold.otf",
@@ -39,12 +39,23 @@ const clash = localFont({
   ],
 });
 
+const unica = localFont({
+  src: [
+    {
+      path: "../public/fonts/UnicaOne-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <style jsx global>{`
         :root {
           --clash-font: ${clash.style.fontFamily};
+          --unica-font: ${unica.style.fontFamily};
         }
       `}</style>
       <MainLayout>
