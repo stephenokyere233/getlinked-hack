@@ -9,7 +9,10 @@ const Timeline = () => {
             reverse ? "flex-row-reverse" : "flex-row"
           }`}
         >
-          <div className={`py-4 ${reverse ? "text-start" : "text-end"} flex-1`}>
+          <div
+            data-aos="fade-right"
+            className={`py-4 ${reverse ? "text-start" : "text-end"} flex-1`}
+          >
             <h3 className="text-pink font-bold text-[22px]">{title}</h3>
             <p dangerouslySetInnerHTML={{ __html: text }} />
           </div>
@@ -19,7 +22,7 @@ const Timeline = () => {
               <span className="font-bold  text-white text-[24px]">{index}</span>
             </div>
           </div>
-          <div className="py-4 flex-1">
+          <div data-aos="fade-right" className="py-4 flex-1">
             <h3
               className={`text-pink font-bold text-[22px] ${
                 reverse ? "text-end" : "text-start"
@@ -53,13 +56,13 @@ const Timeline = () => {
     );
   };
   return (
-    <section className=" relative py-20" id="timeline">
+    <section data-aos="zoom-in-up" className=" relative py-20" id="timeline">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center space-y-4 lg:space-y-6">
           <h2 className="text-[32px] font-bold">Timeline</h2>
           <p className="px-6">
-            Here is the breakdown of the time we anticipate <br className="hidden lg:block" /> using for the upcoming
-            event.
+            Here is the breakdown of the time we anticipate{" "}
+            <br className="hidden lg:block" /> using for the upcoming event.
           </p>
         </div>
         <div className="py-2 lg:py-10 w-full mx-auto my-4 lg:my-6">

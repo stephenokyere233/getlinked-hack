@@ -8,7 +8,7 @@ const BigIdea = () => {
     <section className="border-b border-border py-20" id="overview">
       <SectionLayout>
         <Flex className="justify-between">
-          <div className="relative w-full lg:w-[40%] ">
+          <div data-aos="zoom-in" className="relative w-full lg:w-[40%] ">
             <Image
               src="/assets/idea.png"
               className="object-contain mx-auto"
@@ -27,7 +27,10 @@ const BigIdea = () => {
               alt="hero-man"
             />
           </div>
-          <div className="w-full lg:w-[50%] relative lg:text-start text-center">
+          <div
+            data-aos="fade-left"
+            className="w-full lg:w-[50%] relative lg:text-start text-center"
+          >
             <h2 className="text-[32px] font-bold">
               Introduction to getlinked <br />
               <span className="text-pink">tech Hackathon 1.0</span>

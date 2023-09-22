@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import toast from "react-hot-toast";
 import { ContactForm } from "@/interfaces";
+import { motion } from "framer-motion";
 
 
 const Contact = () => {
@@ -132,7 +133,13 @@ const Contact = () => {
               </span>
             </button>
           </div>
-          <div className="lg:bg-zinc-300 relative lg:bg-opacity-5 flex flex-col py-10 space-y-4 rounded-[5px] lg:py-16">
+          <motion.div
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: 0.5 }}
+            className="lg:bg-zinc-300 relative lg:bg-opacity-5 flex flex-col py-10 space-y-4 rounded-[5px] lg:py-16"
+          >
             <Image
               src="/assets/star-purple.png"
               className=" w-[20px] lg:w-[30px] absolute bottom-[100px] left-4 lg:-left-4"
@@ -154,8 +161,8 @@ const Contact = () => {
               height={500}
               alt="hero-man"
             />
-            <div className="w-[90%]  md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
-              <h2 className="font-semibold text-pink mb-6 text-[22px] lg:text-[25px]">
+            <div className="w-[90%] md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
+              <h2 className="font-semibold text-pink my-6 lg:mb-6 lg:mt-0 text-[22px] lg:text-[25px]">
                 Questions or need assistance?
                 <br />
                 Let us know about it!
@@ -239,7 +246,7 @@ const Contact = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
       </div>
     </section>

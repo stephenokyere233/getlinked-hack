@@ -22,7 +22,7 @@ const RulesAndGuidelines = () => {
       />
       <SectionLayout>
         <Flex className="justify-between" reverse={true}>
-          <div className="relative w-full lg:w-[50%] ">
+          <div data-aos="zoom-in" className="relative w-full lg:w-[50%] ">
             <Image
               src="/assets/rules.png"
               className="mx-auto lg:w-full object-contain"
@@ -38,7 +38,10 @@ const RulesAndGuidelines = () => {
               alt="hero-man"
             />
           </div>
-          <div className="w-full lg:w-[50%] relative lg:text-start text-center">
+          <div
+            data-aos="fade-right"
+            className="w-full lg:w-[50%] relative lg:text-start text-center"
+          >
             <h2 className="text-[32px] font-bold">
               Rules and <br />
               <span className="text-pink">Guidelines</span>

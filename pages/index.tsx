@@ -13,7 +13,7 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
     <>
-      <main className={`min-h-screen relative`}>
+      <main className={`min-h-[100dvh] relative`}>
         <Image
           src="/assets/hero-gradient.png"
           className=" w-full lg:w-[50%] -rotate-90 absolute hidden xl:block -top-[130px] left-0 lg:left-20  -z-10"

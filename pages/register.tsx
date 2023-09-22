@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import SuccessModal from "@/components/modals/success.modal";
 import { RegisterForm } from "@/interfaces";
+import { motion } from "framer-motion";
 
 
 const Register = () => {
@@ -123,7 +124,13 @@ const Register = () => {
             height={500}
             alt="hero-man"
           />
-          <section className="lg:bg-zinc-300 pb-10  lg:bg-opacity-5 flex flex-col space-y-4 rounded-[5px] lg:py-16">
+          <motion.section
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: 0.5 }}
+            className="lg:bg-zinc-300 pb-10  lg:bg-opacity-5 flex flex-col space-y-4 rounded-[5px] lg:py-16"
+          >
             <div className="w-[90%]  md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
               <div className="">
                 <h2 className="font-semibold hidden lg:block text-pink mb-6 text-[22px] lg:text-[25px]">
@@ -289,7 +296,7 @@ const Register = () => {
                 )}
               </Formik>
             </div>
-          </section>
+          </motion.section>
         </div>
       </div>
       {showSuccess && (

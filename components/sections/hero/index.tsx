@@ -4,8 +4,8 @@ import Image from "next/image";
 const MobileHeroText = () => {
   return (
     <>
-      <section className="flex xl:hidden z-[20]  xl:flex-row mt-10 flex-col px-4 items-center mx-auto w-full justify-center  h-full">
-        <div className="flex text-center  flex-col space-y-6 ">
+      <section className="flex  xl:hidden z-[20]  xl:flex-row mt-10 flex-col px-4 items-center mx-auto w-full justify-center  h-full">
+        <div  className="flex text-center  flex-col space-y-6 ">
           <h3 className=" md:text-2xl lg:text-3xl  italic tracking-wide font-bold">
             Igniting a Revolution in
             <span className="relative ">
@@ -75,7 +75,7 @@ const MobileHeroText = () => {
           </div>
         </div>
       </section>
-      <section className=" w-full lg:scale-[0.8] block xl:hidden">
+      <section  className=" w-full lg:scale-[0.8] block xl:hidden">
         <section className="relative">
           <Image
             src="/assets/hero-man.png"
@@ -107,7 +107,7 @@ const DesktopHeroText = () => {
   return (
     <>
       <section className=" xl:flex hidden xl:flex-row flex-col  px-4 items-center mx-auto  lg:min-w-[1400px] h-full">
-        <div className=" xl:flex hidden flex-col space-y-6 ">
+        <div data-aos="zoom-in" className=" xl:flex hidden flex-col space-y-6 ">
           <h1 className="text-[80px] leading-[100px] font-bold">
             <span className="relative">
               getlinked Tech
@@ -163,7 +163,10 @@ const DesktopHeroText = () => {
           </div>
         </div>
       </section>
-      <section className="absolute w-[800px] hidden xl:block  right-0  bottom-0">
+      <section
+        data-aos="fade-left"
+        className="absolute w-[800px] hidden xl:block  right-0  bottom-0"
+      >
         <section className="relative">
           <h3 className="absolute xl:block hidden  text-4xl italic -left-[30px] tracking-wider font-bold">
             Igniting a Revolution in
@@ -209,7 +212,9 @@ const DesktopHeroText = () => {
 
 const Hero = () => {
   return (
-    <section className="relative h-max xl:min-h-screen 2xl:min-h-[90vh] border-b border-border flex flex-col xl:flex-row space-y-4 items-start lg:items-center">
+    <section
+      className="relative h-max xl:min-h-screen 2xl:min-h-[90vh] border-b border-border flex flex-col xl:flex-row space-y-4 items-start lg:items-center"
+    >
       <MobileHeroText />
       <DesktopHeroText />
     </section>

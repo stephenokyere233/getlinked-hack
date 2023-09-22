@@ -23,7 +23,7 @@ const KeyAttributes = () => {
       />
       <SectionLayout>
         <Flex className="justify-between">
-          <div className="relative w-full lg:w-[50%] ">
+          <div data-aos="zoom-in" className="relative w-full lg:w-[50%] ">
             <div className="relative">
               <Image
                 src="/assets/attributes.png"
@@ -66,7 +66,10 @@ const KeyAttributes = () => {
               alt="hero-man"
             />
           </div>
-          <div className="w-full lg:w-[50%] space-y-10 relative lg:text-start text-center">
+          <div
+            data-aos="fade-left"
+            className="w-full lg:w-[50%] space-y-10 relative lg:text-start text-center"
+          >
             <h2 className="text-[32px] font-bold">
               Judging Criteria
               <br />

@@ -3,6 +3,8 @@ import Header from "@/components/header";
 import { useStore } from "@/store";
 import { useRouter } from "next/router";
 import React, { FC, ReactNode, useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MainLayout: FC<{ children: ReactNode }> = ({ children }) => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -28,8 +30,12 @@ const MainLayout: FC<{ children: ReactNode }> = ({ children }) => {
     };
   }, [isScrolling, showMenu]);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-[100dvh] flex-col">
       <Header />
       <main
         onClick={() => {

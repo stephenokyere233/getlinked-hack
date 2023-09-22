@@ -16,6 +16,10 @@ h2 {
   font-family: var(--clash-font);
 }
 
+* {
+  /* border: 1px solid red; */
+}
+
 p {
   @apply leading-[30px];
 }
