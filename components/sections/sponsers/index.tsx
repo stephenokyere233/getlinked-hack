@@ -23,8 +23,9 @@ const Partners = () => {
         <div className="text-center space-y-4">
           <h2 className="text-[32px] font-bold">Partners and Sponsors</h2>
           <p>
-            Getlinked Hackathon 1.0 is honored to have the following <br className="hidden lg:block"/> major
-            companies as its partners and sponsors
+            Getlinked Hackathon 1.0 is honored to have the following{" "}
+            <br className="hidden lg:block" /> major companies as its partners and
+            sponsors
           </p>
         </div>
         <div className="flex relative items-center justify-center my-20">
@@ -37,22 +38,22 @@ const Partners = () => {
           />
           <Image
             src="/assets/star-purple.png"
-            className="absolute w-[30px] -top-10 left-10"
+            className="absolute w-[20px] lg:w-[30px] -top-10 left-10"
             width={500}
             height={500}
             alt="hero-man"
-                  />
-            
+          />
+
           <Image
             src="/assets/star.svg"
-            className=" w-[30px] absolute bottom-[100px] right-[40%]"
+            className=" w-[10px] md:w-[20px] lg:w-[30px] absolute bottom-6 md:bottom-10 lg:bottom-[100px] right-[40%]"
             width={500}
             height={500}
             alt="hero-man"
           />
           <Image
             src="/assets/star-pink.svg"
-            className="absolute w-[30px] top-20 right-[40%]"
+            className="absolute w-[10px] md:w-[20px] lg:w-[30px] top-6 md:top-10 lg:top-20 right-[40%]"
             width={500}
             height={500}
             alt="hero-man"
