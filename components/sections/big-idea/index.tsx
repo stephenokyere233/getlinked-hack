@@ -18,7 +18,7 @@ const BigIdea = () => {
               className="object-contain mx-auto"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="bulb"
             />
             <h3 className="absolute inset-0 mt-4 text-center font-bold  text-[30px] flex items-center justify-center">
               The Big <br /> Idea!
@@ -28,7 +28,7 @@ const BigIdea = () => {
               className="absolute w-[30px] lg:w-[100px] bottom-0 right-[45%] lg:-right-10"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="arrow"
             />
           </div>
           <div

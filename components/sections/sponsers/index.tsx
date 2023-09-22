@@ -34,14 +34,14 @@ const Partners = () => {
             className="z-[20] w-full object-contain"
             width={1500}
             height={1500}
-            alt="hero-man"
+            alt="partners"
           />
           <Image
             src="/assets/star-purple.png"
             className="absolute w-[20px] lg:w-[30px] -top-10 left-10"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star-purple"
           />
 
           <Image
@@ -49,14 +49,14 @@ const Partners = () => {
             className=" w-[10px] md:w-[20px] lg:w-[30px] absolute bottom-6 md:bottom-10 lg:bottom-[100px] right-[40%]"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star"
           />
           <Image
             src="/assets/star-pink.svg"
             className="absolute w-[10px] md:w-[20px] lg:w-[30px] top-6 md:top-10 lg:top-20 right-[40%]"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star-pink"
           />
         </div>
       </SectionLayout>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const MobileHeroText = () => {
   return (
@@ -15,7 +16,7 @@ const MobileHeroText = () => {
                 width={500}
                 className="absolute left-0 w-full -bottom-5"
                 height={500}
-                alt="hero-man"
+                alt="line"
               />
             </span>
           </h3>
@@ -56,9 +57,9 @@ const MobileHeroText = () => {
           <p className="text-[18px] font-semibold">
             Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize
           </p>
-          <div className="mx-auto">
+          <Link href="/register" className="mx-auto">
             <button className="btn-primary">Register</button>
-          </div>
+          </Link>
           <div className="flex gap-6 w-max unica-one mx-auto items-center text-[40px]">
             <span className="">
               <span className="">00</span>
@@ -82,14 +83,14 @@ const MobileHeroText = () => {
             width={500}
             className="grayscale w-full"
             height={500}
-            alt="hero-man"
+            alt="boy wearing smart googles"
           />
           <Image
             src="/assets/hero-mask.png"
             className="absolute w-full bottom-0"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="hero-mask"
           />
           <Image
             src="/assets/hero-gradient.png"
@@ -177,7 +178,7 @@ const DesktopHeroText = () => {
                 width={500}
                 className="absolute left-0 w-full -bottom-5"
                 height={500}
-                alt="hero-man"
+                alt="line"
               />
             </span>
           </h3>
@@ -186,7 +187,7 @@ const DesktopHeroText = () => {
             width={500}
             className="absolute grayscale w-full bottom-0"
             height={500}
-            alt="hero-man"
+            alt="boy-wearing smart googles"
           />
           <div className="w-full">
             <Image
@@ -194,7 +195,7 @@ const DesktopHeroText = () => {
               className="absolute w-full bottom-0"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="hero-mask"
             />
             <Image
               src="/assets/hero-gradient.png"

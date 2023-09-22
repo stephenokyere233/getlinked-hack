@@ -92,14 +92,14 @@ const Register = () => {
             className=" w-[20px] lg:w-[30px] absolute -top-[50px] left-[80%] lg:left-[20px]"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star pink"
           />
           <Image
             src="/assets/register.png"
             width={500}
             className=" w-[250px] md:w-[400px] mx-auto lg:w-max scale-[0.8] lg:scale-100"
             height={500}
-            alt="hero-man"
+            alt="boy sitting on chair"
           />
         </div>
         <div className=" w-full relative lg:w-[50%]">
@@ -108,21 +108,21 @@ const Register = () => {
             className=" w-[20px] lg:w-[30px] absolute bottom-[100px] left-4 lg:-left-4 -z-10"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star-purple"
           />
           <Image
             src="/assets/star-gray.png"
             className=" w-[20px] lg:w-[30px] absolute -top-[20px] lg:-top-[50px] right-4 lg:-right-[100px]"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star-gray"
           />
           <Image
             src="/assets/star.svg"
             className="absolute w-[30px] bottom-0 -right-[150px]"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star"
           />
           <motion.section
             initial={{ opacity: 0, x: "100%" }}

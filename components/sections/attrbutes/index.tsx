@@ -30,7 +30,7 @@ const KeyAttributes = () => {
                 className="w-full"
                 width={1000}
                 height={1000}
-                alt="hero-man"
+                alt="man-and-woman"
               />
               <div className="-top-[150px] items-center flex flex-col gap-14 left-[85px] -z-10 w-[150px] absolute">
                 <Image
@@ -45,7 +45,7 @@ const KeyAttributes = () => {
                   width={1000}
                   height={1000}
                   className="hidden lg:block"
-                  alt="hero-man"
+                  alt="ellipse"
                 />
               </div>
             </div>
@@ -55,7 +55,7 @@ const KeyAttributes = () => {
                 className=" w-[30px] bottom-0 right-0"
                 width={500}
                 height={500}
-                alt="hero-man"
+                alt="star-gray"
               />
             </div>
             <Image
@@ -63,7 +63,7 @@ const KeyAttributes = () => {
               className="absolute w-[30px] bottom-0 right-0"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
           </div>
           <div

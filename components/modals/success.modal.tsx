@@ -17,14 +17,14 @@ const SuccessModal: FC<{ showModal: boolean; onHideModal: () => void }> = ({
             width={500}
             className=" w-[350px] absolute right-0 md:w-[500px] mx-auto lg:w-max scale-[0.6] lg:scale-[0.8]"
             height={500}
-            alt="hero-man"
+            alt="hurray"
           />
           <Image
             src="/assets/tick.png"
             width={500}
             className=" w-[250px] top-4 md:top-0 -left-10   absolute md:w-[400px] mx-auto lg:w-max scale-[0.6] lg:scale-[0.8] "
             height={500}
-            alt="hero-man"
+            alt="tick"
           />
         </div>
         <div className="space-y-3">

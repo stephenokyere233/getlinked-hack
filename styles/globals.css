@@ -17,16 +17,19 @@ h2 {
 }
 
 * {
-  /* border: 1px solid red; */
-}
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+  }
 
-p {
+  p {
   @apply leading-[30px];
 }
 
 body {
+  scroll-snap-type: y mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
   @apply bg-background text-white overflow-x-clip;
 }
 

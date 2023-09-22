@@ -60,14 +60,14 @@ const PrivacyPolicy = () => {
               className="w-[90%] md:w-full absolute -top-10 lg:-top-20 -z-10"
               width={1000}
               height={1000}
-              alt="hero-man"
+              alt="privacy sheild"
             />
             <Image
               src="/assets/privacy.png"
               className="w-full mt-20"
               width={1000}
               height={1000}
-              alt="hero-man"
+              alt="boy standing on lock"
             />
           </div>
         </Flex>

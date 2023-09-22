@@ -87,7 +87,7 @@ const Header = () => {
                 className=" w-[30px] "
                 width={500}
                 height={500}
-                alt="hero-man"
+                alt="close"
               />
               <span className="absolute inset-0 w-full flex items-center justify-center ">
                 <BiX size={24} />
@@ -104,7 +104,7 @@ const Header = () => {
               className=" w-[30px] "
               width={500}
               height={500}
-              alt="hero-man"
+              alt="menu"
             />
           </button>
         )}

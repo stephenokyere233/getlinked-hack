@@ -81,8 +81,8 @@ const FAQS = () => {
 
   return (
     <section
-      data-aos="zoom-in-up"
-      className="border-b scroll-m-[120px] border-border relative py-20"
+      data-aos="fade-up"
+      className="border-b scroll-m-[150px] border-border relative py-20"
       id="faqs"
     >
       <SectionLayout className="lg:py-20 my-6">
@@ -94,7 +94,7 @@ const FAQS = () => {
                 className="w-full mt-10 lg:mt-0"
                 width={1000}
                 height={1000}
-                alt="hero-man"
+                alt="faqs"
               />
               <div className="-top-[80px] -z-10 items-baseline flex gap-20 left-[50px] scale-[0.6] md:scale-100 lg:left-[100px]   absolute">
                 <Image
@@ -110,7 +110,7 @@ const FAQS = () => {
                     className="w-[70px]"
                     width={1000}
                     height={1000}
-                    alt="hero-man"
+                    alt="question-mark"
                   />
                 </div>
 
@@ -119,7 +119,7 @@ const FAQS = () => {
                   className="w-[50px] pb-10"
                   width={1000}
                   height={1000}
-                  alt="hero-man"
+                  alt="question-mark"
                 />
               </div>
             </div>
@@ -128,21 +128,21 @@ const FAQS = () => {
               className=" w-[30px] absolute top-[130px] left-[120px]"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star-pink"
             />
             <Image
               src="/assets/star-gray.png"
               className=" w-[30px] absolute bottom-[50%] left-0"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star-pink"
             />
             <Image
               src="/assets/star.svg"
               className="absolute w-[30px] bottom-0 right-16"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
           </div>
           <div className="w-full lg:w-[40%] space-y-10 relative lg:text-start text-center">
@@ -151,7 +151,7 @@ const FAQS = () => {
               className="absolute w-[30px] -top-4 -left-6"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star-purple"
             />
             <h2 className="text-[32px] font-bold">
               Frequently Asked

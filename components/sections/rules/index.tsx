@@ -28,14 +28,14 @@ const RulesAndGuidelines = () => {
               className="mx-auto lg:w-full object-contain"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="rules illustration"
             />
             <Image
               src="/assets/arrow.png"
               className="absolute hidden lg:block w-[100px] bottom-0 lg:right-10 -right-10"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="arrow"
             />
           </div>
           <div

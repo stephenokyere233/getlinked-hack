@@ -25,7 +25,7 @@ const Prices = () => {
         className="absolute w-[20px] lg:w-[30px] top-[50px] md:top-[100px] lg:top-[200px] left-[20%]"
         width={500}
         height={500}
-        alt="hero-man"
+        alt="star pink"
       />
       <SectionLayout className="py-20 my-6">
         <div className="flex flex-col justify-end items-end">
@@ -48,14 +48,14 @@ const Prices = () => {
               className="w-full"
               width={2000}
               height={2000}
-              alt="hero-man"
+              alt="trophy"
             />
             <Image
               src="/assets/star.svg"
               className="absolute w-[20px] -bottom-[50px] left-[30%]"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
           </div>
           <div data-aos="zoom-in-left" className="relative w-full lg:w-[50%] ">
@@ -64,28 +64,28 @@ const Prices = () => {
               className="w-full mt-4 lg:mt-10"
               width={1000}
               height={1000}
-              alt="hero-man"
+              alt="rewards"
             />
             <Image
               src="/assets/star-gray.png"
               className=" w-[20px] lg:w-[30px] absolute -bottom-[50px] right-[30%]"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star-gray"
             />
             <Image
               src="/assets/star.svg"
               className="absolute w-[20px] lg:w-[30px] top-16 right-2 lg:-right-4"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
             <Image
               src="/assets/star.svg"
               className="absolute w-[20px] lg:w-[30px] top-0 left-20"
               width={500}
               height={500}
-              alt="hero-man"
+              alt="star"
             />
           </div>
         </Flex>

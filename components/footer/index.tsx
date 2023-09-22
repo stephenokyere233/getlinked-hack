@@ -95,7 +95,7 @@ const Footer = () => {
                 className=" w-[20px] "
                 width={500}
                 height={500}
-                alt="hero-man"
+                alt="location"
               />
               <p>
                 27,Alara Street <br /> Yaba 100012 <br />

@@ -74,7 +74,7 @@ const Contact = () => {
             className=" w-[30px] absolute -top-[50px] left-[20px]"
             width={500}
             height={500}
-            alt="hero-man"
+            alt="star pink"
           />
           <h2 className="text-[32px] text-pink font-semibold">Get in touch</h2>
           <p>
@@ -132,7 +132,7 @@ const Contact = () => {
                   className=" w-[30px] "
                   width={500}
                   height={500}
-                  alt="hero-man"
+                  alt="close"
                 />
                 <span className="absolute inset-0 w-full flex items-center justify-center ">
                   <MdOutlineArrowBackIos size={20} />
