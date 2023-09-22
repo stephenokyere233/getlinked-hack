@@ -82,8 +82,15 @@ const Register = () => {
           Register
         </h2>
       </div>
-      <div className="mx-auto max-w-[1500px] justify-between min-h-[90vh] flex-col lg:flex-row flex items-center">
-        <div className=" w-full lg:w-[45%] ">
+      <div className="mx-auto max-w-[1500px] relative justify-between min-h-[90vh] flex-col lg:flex-row flex items-center">
+        <div className=" w-full lg:w-[45%] relative ">
+          <Image
+            src="/assets/star-pink.svg"
+            className=" w-[20px] lg:w-[30px] absolute -top-[50px] left-[80%] lg:left-[20px]"
+            width={500}
+            height={500}
+            alt="hero-man"
+          />
           <Image
             src="/assets/register.png"
             width={500}
@@ -92,7 +99,28 @@ const Register = () => {
             alt="hero-man"
           />
         </div>
-        <div className=" w-full lg:w-[50%]">
+        <div className=" w-full relative lg:w-[50%]">
+          <Image
+            src="/assets/star-purple.png"
+            className=" w-[20px] lg:w-[30px] absolute bottom-[100px] left-4 lg:-left-4 -z-10"
+            width={500}
+            height={500}
+            alt="hero-man"
+          />
+          <Image
+            src="/assets/star-gray.png"
+            className=" w-[20px] lg:w-[30px] absolute -top-[20px] lg:-top-[50px] right-4 lg:-right-[100px]"
+            width={500}
+            height={500}
+            alt="hero-man"
+          />
+          <Image
+            src="/assets/star.svg"
+            className="absolute w-[30px] bottom-0 -right-[150px]"
+            width={500}
+            height={500}
+            alt="hero-man"
+          />
           <section className="lg:bg-zinc-300 pb-10  lg:bg-opacity-5 flex flex-col space-y-4 rounded-[5px] lg:py-16">
             <div className="w-[90%]  md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
               <div className="">

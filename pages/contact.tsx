@@ -16,7 +16,7 @@ interface ContactForm {
 
 const Contact = () => {
   const router = useRouter();
-  const initialValues:ContactForm = {
+  const initialValues: ContactForm = {
     firstName: "",
     email: "",
     message: "",
@@ -72,7 +72,14 @@ const Contact = () => {
         alt="hero-gradient"
       />
       <div className=" flex items-center max-w-[1400px] mx-auto justify-center h-[90vh]">
-        <section className="lg:w-[40%] hidden lg:block space-y-6 font-medium text-xl">
+        <section className="lg:w-[40%] hidden lg:block relative space-y-6 font-medium text-xl">
+          <Image
+            src="/assets/star-pink.svg"
+            className=" w-[30px] absolute -top-[50px] left-[20px]"
+            width={500}
+            height={500}
+            alt="hero-man"
+          />
           <h2 className="text-[32px] text-pink font-semibold">Get in touch</h2>
           <p>
             Contact <br /> Information
@@ -129,7 +136,28 @@ const Contact = () => {
               </span>
             </button>
           </div>
-          <div className="lg:bg-zinc-300 lg:bg-opacity-5 flex flex-col py-10 space-y-4 rounded-[5px] lg:py-16">
+          <div className="lg:bg-zinc-300 relative lg:bg-opacity-5 flex flex-col py-10 space-y-4 rounded-[5px] lg:py-16">
+            <Image
+              src="/assets/star-purple.png"
+              className=" w-[20px] lg:w-[30px] absolute bottom-[100px] left-4 lg:-left-4"
+              width={500}
+              height={500}
+              alt="hero-man"
+            />
+            <Image
+              src="/assets/star-gray.png"
+              className=" w-[20px] lg:w-[30px] absolute -top-[20px] lg:-top-[50px] right-4 lg:-right-[100px]"
+              width={500}
+              height={500}
+              alt="hero-man"
+            />
+            <Image
+              src="/assets/star.svg"
+              className="absolute w-[30px] bottom-0 -right-[150px]"
+              width={500}
+              height={500}
+              alt="hero-man"
+            />
             <div className="w-[90%]  md:w-[80%] lg:min-w-[400px] xl:min-w-[500px] mx-auto">
               <h2 className="font-semibold text-pink mb-6 text-[22px] lg:text-[25px]">
                 Questions or need assistance?
@@ -186,6 +214,34 @@ const Contact = () => {
                   </fieldset>
                 </Form>
               </Formik>
+
+              <div className="flex lg:hidden my-4 mt-6 items-center flex-col gap-2">
+                <h3 className="text-pink text-[18px]  lg:text-[20px] font-bold">
+                  Share on
+                </h3>
+                <ul className="flex gap-3 ">
+                  <li>
+                    <Link href="#">
+                      <FaXTwitter size={24} />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      <FaInstagram size={24} />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      <FaFacebookF size={24} />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#">
+                      <FaLinkedinIn size={24} />
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
