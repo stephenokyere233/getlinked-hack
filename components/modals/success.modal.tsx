@@ -36,7 +36,7 @@ const SuccessModal: FC<{ showModal: boolean; onHideModal: () => void }> = ({
               Yes, it was easy and you did it! <br /> check your mail box for next step
             </p>
           </div>
-          <button onClick={() => router.back()} className="btn-primary w-full text-xl">
+          <button onClick={() => router.push("/")} className="btn-primary w-full text-xl">
             Back
           </button>
         </div>
