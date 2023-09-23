@@ -5,7 +5,8 @@ import * as Yup from "yup";
 import SuccessModal from "@/components/modals/success.modal";
 import { RegisterForm } from "@/interfaces";
 import { motion } from "framer-motion";
-
+import CircularLoader from "@/components/loader";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [showSuccess, setShowSuccess] = useState<boolean>(false);
@@ -32,37 +33,43 @@ const Register = () => {
       .required("Please confirm before submitting"),
   });
 
-  const sendForm = (data: RegisterForm) => {
+  const sendForm = async (data: RegisterForm) => {
     setLoading(true);
-    fetch("https://backend.getlinked.ai/hackathon/registration", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: data.email,
-        phone_number: data.phone,
-        team_name: data.teamName,
-        group_size: Number(data.groupSize),
-        project_topic: data.projectTopic,
-        category: 1,
-        privacy_poclicy_accepted: data.agree,
-      }),
-    })
-      .then((res) => res.json())
-      .then((_) => {
-        setShowSuccess(true);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
+    try {
+      const res = await fetch("https://backend.getlinked.ai/hackathon/registration", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          phone_number: data.phone,
+          team_name: data.teamName,
+          group_size: data.groupSize,
+          project_topic: data.projectTopic,
+          category: 1,
+          privacy_poclicy_accepted: data.agree,
+        }),
       });
+      const result = await res.json();
+      console.log(result);
+      setShowSuccess(true);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      toast.error("Oops! Something bad happened");
+      setLoading(false);
+    }
   };
 
   const handleSubmit = async (values: any, { resetForm }: any) => {
-    sendForm(values);
-    resetForm(initialValues);
+    sendForm(values)
+      .then(() => {
+        resetForm(initialValues);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <section className="relative overflow-clip lg:min-h-[90vh] ">
@@ -85,7 +92,7 @@ const Register = () => {
           Register
         </h2>
       </div>
-      <div className="mx-auto max-w-[1500px] relative justify-between min-h-[90vh] flex-col lg:flex-row flex items-center">
+      <div className="mx-auto max-w-[1500px] relative justify-between min-h-[90vh] px-4 flex-col lg:flex-row flex items-center">
         <div className=" w-full lg:w-[45%] relative ">
           <Image
             src="/assets/star-pink.svg"
@@ -257,11 +264,11 @@ const Register = () => {
                           Group Size
                         </label>
                         <Field
-                          type="text"
+                          type="number"
                           id="groupSize"
                           name="groupSize"
                           placeholder="Group Size (1-10)"
-                          className="border p-4 bg-zinc-300 bg-opacity-5 rounded-md w-full"
+                          className="border p-4 bg-zinc-300 appearance-none bg-opacity-5 rounded-md w-full"
                         />
                         <ErrorMessage
                           name="groupSize"
@@ -289,7 +296,7 @@ const Register = () => {
                         </label>
                       </div>
                       <button className="btn-primary w-full text-xl mx-auto">
-                        {loading ? "Submitting.." : " Register Now"}
+                        {loading ? <CircularLoader /> : "Register Now"}
                       </button>
                     </fieldset>
                   </Form>

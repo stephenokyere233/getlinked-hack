@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaXTwitter, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import * as Yup from "yup";
 import Image from "next/image";
@@ -9,47 +9,56 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 import toast from "react-hot-toast";
 import { ContactForm } from "@/interfaces";
 import { motion } from "framer-motion";
+import CircularLoader from "@/components/loader";
 
 const Contact = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState<boolean>(false);
   const initialValues: ContactForm = {
     firstName: "",
     email: "",
     message: "",
   };
 
-  const sendForm = (data: ContactForm) => {
-    fetch("https://backend.getlinked.ai/hackathon/contact-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        first_name: data.firstName,
-        email: data.email,
-        message: data.message,
-      }),
-    })
-      .then((res) => res.json())
-      .then((_) => {
-        toast.success("Thank you for contacting us!");
-      })
-      .catch((err) => {
-        console.log(err);
+  const sendForm = async (data: ContactForm) => {
+    setLoading(true);
+    try {
+      const res = await fetch("https://backend.getlinked.ai/hackathon/contact-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          first_name: data.firstName,
+          email: data.email,
+          message: data.message,
+        }),
       });
+      const result = await res.json();
+      console.log(result);
+      setLoading(false);
+      toast.success("Thank you for contacting us!");
+    } catch (err) {
+      toast.error("Oops! Something bad happened");
+      setLoading(false);
+      console.log(err);
+    }
   };
 
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("Please enter your first name"),
     email: Yup.string().email("Invalid email"),
-    message: Yup.string()
-      .required("Please send us a message")
-      .min(20, "Message should be more than 20 characters"),
+    message: Yup.string().required("Please send us a message"),
   });
 
   const handleSubmit = async (values: ContactForm, { resetForm }: any) => {
-    sendForm(values);
-    resetForm(initialValues);
+    sendForm(values)
+      .then(() => {
+        resetForm(initialValues);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <section className="relative overflow-x-clip lg:h-[90vh] xl:overflow-clip ">
@@ -172,7 +181,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
               >
                 <Form>
-                  <fieldset className=" space-y-8  lg:space-y-10 ">
+                  <fieldset className=" space-y-8 flex flex-col  lg:space-y-10 ">
                     <div className="">
                       <Field
                         type="text"
@@ -208,11 +217,12 @@ const Contact = () => {
                       placeholder="Message"
                       className="border p-4 rounded-md bg-zinc-300 bg-opacity-5 w-full min-h-[200px] h-[200px]"
                     />
-                    <div className="justify-center flex items-center">
-                      <button className="btn-primary w-[200px] text-xl mx-auto">
-                        Submit
-                      </button>
-                    </div>
+                    <button
+                      type="submit"
+                      className="btn-primary w-[200px] text-xl mx-auto"
+                    >
+                      {loading ? <CircularLoader /> : "Submit"}
+                    </button>
                   </fieldset>
                 </Form>
               </Formik>

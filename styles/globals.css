@@ -43,3 +43,31 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+
+.loader {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+html .modal{
+  @apply p-6 md:p-10 rounded-xl border border-purple bg-zinc-300 bg-opacity-5 scale-[0.85] md:scale-100 md:w-[500px] lg:w-[700px]
+}
+
+html .modal-layout{
+  @apply w-[100vw] h-[100dvh] z-[30] fixed top-0 inset-0 flex items-center justify-center
+}

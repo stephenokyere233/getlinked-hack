@@ -28,7 +28,7 @@ const SuccessModal: FC<{ showModal: boolean; onHideModal: () => void }> = ({
           />
         </div>
         <div className="space-y-3">
-          <h3 className="font-semibold text-center text-[22px] lg:text-[25px]">
+          <h3 className="font-semibold text-center text-[20px] lg:text-[25px]">
             Congratulations <br /> you have successfully Registered!
           </h3>
           <div className="text-center text-[16px] lg:text-[18px]">
