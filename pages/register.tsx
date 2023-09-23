@@ -36,7 +36,7 @@ const Register = () => {
   const sendForm = async (data: RegisterForm) => {
     setLoading(true);
     try {
-      const res = await fetch("https://backend.getlinked.ai/hackathon/registration", {
+      await fetch("https://backend.getlinked.ai/hackathon/registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,12 +51,9 @@ const Register = () => {
           privacy_poclicy_accepted: data.agree,
         }),
       });
-      const result = await res.json();
-      console.log(result);
       setShowSuccess(true);
       setLoading(false);
     } catch (err) {
-      console.log(err);
       toast.error("Oops! Something bad happened");
       setLoading(false);
     }

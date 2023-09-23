@@ -23,7 +23,7 @@ const Contact = () => {
   const sendForm = async (data: ContactForm) => {
     setLoading(true);
     try {
-      const res = await fetch("https://backend.getlinked.ai/hackathon/contact-form", {
+      await fetch("https://backend.getlinked.ai/hackathon/contact-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,14 +34,11 @@ const Contact = () => {
           message: data.message,
         }),
       });
-      const result = await res.json();
-      console.log(result);
       setLoading(false);
       toast.success("Thank you for contacting us!");
     } catch (err) {
       toast.error("Oops! Something bad happened");
       setLoading(false);
-      console.log(err);
     }
   };
 
