@@ -53,7 +53,7 @@ const Header = () => {
   };
   return (
     <header className=" px-4 h-24 sticky top-0 py-6 border-b bg-background bg-opacity-40 z-[30] border-border">
-      <div className="mx-auto max-w-[1500px] flex items-center justify-between">
+      <div className="mx-auto max-w-[1400px] flex items-center justify-between">
         <Logo />
         <nav className="hidden lg:flex gap-10">
           {ROUTES.map((route) => (
