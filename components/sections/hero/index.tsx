@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Countdown from "@/components/countdown";
 
 const MobileHeroText = () => {
   return (
@@ -60,23 +61,13 @@ const MobileHeroText = () => {
           <Link href="/register" className="mx-auto">
             <button className="btn-primary">Register</button>
           </Link>
-          <div className="flex gap-6 w-max unica-one mx-auto items-center text-[40px]">
-            <span className="">
-              <span className="">00</span>
-              <span className="uppercase text-[18px]">h</span>
-            </span>
-            <span className="">
-              <span className="">00</span>
-              <span className="uppercase text-[18px]">m</span>
-            </span>
-            <span className="">
-              <span className="">00</span>
-              <span className="uppercase text-[18px]">s</span>
-            </span>
-          </div>
+          <Countdown targetDate="11/18/2023" />
         </div>
       </section>
-      <section data-aos="fade-up-right" className=" w-full lg:scale-[0.8] block xl:hidden">
+      <section
+        data-aos="fade-up-right"
+        className=" w-full lg:scale-[0.8] block xl:hidden"
+      >
         <section className="relative">
           <Image
             src="/assets/hero-man.png"
@@ -148,20 +139,7 @@ const DesktopHeroText = () => {
             Big prize
           </p>
           <button className="btn-primary w-[200px]">Register</button>
-          <div className="flex gap-6 unica-one items-center text-[60px]">
-            <span className="">
-              <span className="">00</span>
-              <span className="uppercase text-[18px]">h</span>
-            </span>
-            <span className="">
-              <span className="">00</span>
-              <span className="uppercase text-[18px]">m</span>
-            </span>
-            <span className="">
-              <span className="">00</span>
-              <span className="uppercase text-[18px]">s</span>
-            </span>
-          </div>
+           <Countdown targetDate="11/18/2023" />
         </div>
       </section>
       <section
@@ -213,9 +191,7 @@ const DesktopHeroText = () => {
 
 const Hero = () => {
   return (
-    <section
-      className="relative h-max xl:min-h-screen 2xl:min-h-[90vh] border-b border-border flex flex-col xl:flex-row space-y-4 items-start lg:items-center"
-    >
+    <section className="relative h-max xl:min-h-screen 2xl:min-h-[90vh] border-b border-border flex flex-col xl:flex-row space-y-4 items-start lg:items-center">
       <MobileHeroText />
       <DesktopHeroText />
     </section>

@@ -36,11 +36,17 @@ const Timeline = () => {
         <div className={`flex xl:hidden gap-2 md:gap-4`}>
           <div className="w-max lg:w-[100px]  gap-2 lg:gap-4 flex flex-col justify-between items-center">
             <div className="min-h-[60px] flex-1 lg:min-h-[100px] bg-line-gradient w-[3px]" />
-            <div className=" w-[30px] h-[30px] md:w-[40px] md:h-[40px] lg:w-[60px] flex items-center rounded-full lg:h-[60px] bg-line-gradient text-black justify-center">
+            <div
+              data-aos="zoom-in"
+              className=" w-[30px] h-[30px] md:w-[40px] md:h-[40px] lg:w-[60px] flex items-center rounded-full lg:h-[60px] bg-line-gradient text-black justify-center"
+            >
               <span className="font-bold  text-white lg:text-[20px]">{index}</span>
             </div>
           </div>
-          <div className={`flex flex-col justify-between py-1 md:py-2 flex-1`}>
+          <div
+            data-aos="fade-up-right"
+            className={`flex flex-col justify-between py-1 md:py-2 flex-1`}
+          >
             <div>
               <h3 className="text-pink font-bold text-[16.5px] lg:text-[22px]">
                 {title}
