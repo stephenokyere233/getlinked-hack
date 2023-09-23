@@ -34,7 +34,7 @@ const FAQCard: FC<{
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className={`overflow-hidden text-gray-300 pb-2`}
+              className={`overflow-hidden text-[14px] text-start md:text-[16px] text-gray-300 pb-2`}
               dangerouslySetInnerHTML={{ __html: faq.answer }}
             ></motion.p>
           )}
